@@ -52,7 +52,6 @@ This analysis of global AI trends from 2020 to 2025 reveals an average AI adopti
 
  - **The total volume of AI content produced is 9,215 TB**.
  - **The Gaming industry is the largest producer of AI content**, followed by Media, Education, and Retail. This was confirmed by SQL queries summing the content volume for each industry.
- - **SQL analysis was used to calculate the growth in AI-generated content** for each industry between 2020 and 2025, identifying the fastest-scaling sectors.
  - **Content volume growth shows Gaming sector scaling at the fastest rate.** In 2020 this sector had 16TB of content volume but in 2025 it has 277TB suggesting this industry have found sustainable AI integration model.
 
 <img width="1281" height="456" alt="Screenshot 2025-07-29 at 18 42 30" src="https://github.com/user-attachments/assets/9d02b188-a3c1-46f2-ab12-c6d7ae704e50" />
