@@ -1,94 +1,95 @@
-# Global Analysis of AI's Influence on Digital Media Industries (2020-2025)
+# AI Impact Analysis on Digital Media (2020-2025)
 
-## Project Background and Overview
+## Project Background
 
-The rapid evolution of artificial intelligence (AI) is transforming the digital media landscape, affecting content creation, workforce dynamics, and economic outcomes across industries and countries. This project uses the [Impact of AI on Digital Media (2020-2025)](https://www.kaggle.com/datasets/atharvasoundankar/impact-of-ai-on-digital-media-2020-2025) dataset to deliver actionable insights into AI adoption rates, job losses due to automation, AI-generated content volume, and human-AI collaboration trends. These key performance indicators (KPIs) are investigated to support stakeholders, business leaders, policymakers, and researchers in making informed decisions. Insights will guide marketing and product teams in resource allocation, assist operations managers in workforce planning, and inform policymakers about regulatory impacts, ultimately shaping the future of the digital media ecosystem.
+As a data analyst who is studying the digital media landscape, this project analyzes the transformative effects of Artificial Intelligence between 2020 and 2025. Using [Impact of AI on Digital Media (2020-2025)](https://www.kaggle.com/datasets/atharvasoundankar/impact-of-ai-on-digital-media-2020-2025) dataset, I investigated how AI is reshaping industries through its impact on content creation, workforce dynamics, and economic outcomes. This insights will guide marketing and product teams in resource allocation, assist operations managers in workforce planning, and inform policymakers about regulatory impacts, helping with navigation in the age of the rapid integration of AI.
 
-## Project Goals
+Insights and recommendations are provided on the following key areas:
 
-- **Measure AI Integration**: Calculate global and country-specific AI adoption rates (%) to better understand the extent of AI involvement and identify leaders in digital media innovation.
-- **Evaluate Workforce Impact**: Identify industries with the highest job loss due to AI (%) to assess automation’s effect on employment and support workforce retraining strategies.
-- **Track Content Creation Trends**: Analyze AI-generated content volume (TBs per year) from 2020 to 2025 to see AI’s role in scaling content production across industries.
-- **Assess Regulatory Effects**: Examine how regulation status (Strict, Moderate, Lenient) influences human-AI collaboration rates (%) to inform policy development.
-- **Link AI to Economic Outcomes**: Match up AI adoption rates with revenue increases (%) to demonstrate the financial benefits of AI investment for business strategy.
+ - **AI Adoption and Growth Trends**
+ - **Industry and Content Volume Analysis**
+ - **Workforce Impact and Economic Outcomes**
+ - **Regulatory Effects and Human-AI Collaboration**
 
-## Dataset
+The SQL queries used to inspect and analyze the data for this project can be found in the `AI_Impact_Analysis.sql` file.
 
-- **Source**: Kaggle
-- **Columns**:
-  - Country, Year, Industry
-  - AI Adoption Rate (%), AI-Generated Content Volume (TBs per year)
-  - Job Loss Due to AI (%), Regulation Status
-  - Human-AI Collaboration Rate (%), Top AI Tools Used
-  - Revenue Increase Due to AI (%)
-- **Link**: [Dataset](https://www.kaggle.com/datasets/atharvasoundankar/impact-of-ai-on-digital-media-2020-2025)
+An interactive Tableau dashboard to report this findings can be found here: [AI Impact Analysis Dashboard](https://public.tableau.com/app/profile/viktor.kukhar/viz/AIImpactAnalysis/Dashboard)
 
-## Data Snapshot
+## Data Structure
+
+The analysis is based on a single table, `Global_AI_Content_Impact_Dataset`. A description of the key columns is as follows:
+
+ - **Country, Year, Industry:** Categorical data for grouping.
+ - **AI Adoption Rate (%):** The percentage of AI integration.
+ - **AI-Generated Content Volume (TBs per year):** The volume of content produced by AI.
+ - **Job Loss Due to AI (%):** The workforce impact of automation.
+ - **Regulation Status:** The regulatory environment (Strict, Moderate, Lenient).
+ - **Human-AI Collaboration Rate (%):** The rate of human and AI interaction in workflows.
+ - **Revenue Increase Due to AI (%):** The financial benefit of AI adoption.
 
 <img width="876" alt="Screenshot 2025-05-15 at 15 30 06" src="https://github.com/user-attachments/assets/6ed73c36-1c31-43a1-8e44-64724d65e47e" />
-
 <img width="1083" alt="Screenshot 2025-05-15 at 13 48 54" src="https://github.com/user-attachments/assets/16b67713-609d-4bd2-a4e7-4798cbf2ebee" />
-
-## Files
-
-- `AI_Impact_Analysis.sql`: Contains 13 SQL queries addressing critical business and policy questions.
-
-## Key Queries
-
-1. **Average AI Adoption Rate**: Computes the global baseline for AI integration.
-2. **Highest Adoption in 2025**: Pinpoints the top AI-adopting country in the final year.
-3. **Content Volume by Industry**: Aggregates AI-generated content by industry.
-4. **Top Adoption per Country**: Identifies each country’s leading AI-adopting industry.
-5. **Job Loss by Regulation**: Averages job loss under different regulatory frameworks.
-6. **Adoption vs Revenue**: Categorizes adoption levels and links them to revenue gains.
-7. **Adoption Trends**: Measures changes in AI adoption between 2020 and 2025.
 
 ## Executive Summary
 
-From 2020 to 2025, AI adoption in digital media rose steadily, reaching a global average of 54.26%. Canada led in 2025 with a 94.76% adoption rate, reflecting aggressive AI integration. The gaming industry dominated AI-generated content production, averaging 1200 TBs per year by 2025, while manufacturing suffered the highest job losses (exact percentage varies by query, e.g., tied to Midjourney usage). Countries with lenient regulations showed a 51% human-AI collaboration rate, slightly below the 56% in strictly regulated nations, suggesting regulatory nuance impacts collaboration. Revenue increases averaged higher in the "High" adoption group (66-100%), at approximately 15% (derived from Query 6 trends), underscoring AI’s economic value.
+### Overview of Findings
+
+This analysis of global AI trends from 2020 to 2025 reveals an average AI adoption rate of 54% and an average job loss of 26%. The total AI-generated content volume has reached 9,215 TB, with the Gaming and Media sectors leading this expansion. A medium level of AI adoption correlates with the highest increase in revenue, while regulatory environments with "Moderate" policies experience the highest job loss.
+
+<img width="1202" height="809" alt="Screenshot 2025-07-29 at 17 34 12" src="https://github.com/user-attachments/assets/3f87826b-a92a-4701-87a3-ecb34028d0fd" />
 
 ## Insights Deep Dive
 
-- **Global AI Adoption Baseline**: The global average AI adoption rate across all records was 54.26% (Query 1), providing a benchmark for evaluating regional and sectoral performance.
-- **Canada’s Leadership in AI Integration**: By 2025, Canada achieved the highest AI adoption rate at 94.76% (Query 2), demonstrating a strong national commitment to AI-driven innovation in digital media.
-- **Gaming Industry Surge**: The gaming sector led in AI-generated content, producing an impressive 1200 TBs per year (Query 3). This volume grew significantly, with an increase of approximately 800 TBs per year between 2020 and 2025 (Query 11), reflecting heavy reliance on tools like generative AI for game assets and media production.
-- **Manufacturing Job Losses**: Manufacturing experienced the highest job losses due to AI, with an average loss rate potentially exceeding 20% (Query 8 context). This was often linked to automation tools like Midjourney, highlighting a critical area for workforce intervention and reskilling.
-- **Regulatory Impact on Collaboration**: Countries with lenient regulations had a human-AI collaboration rate of 51%, compared to 56% in strictly regulated nations (Query 9). This suggests that stricter regulatory frameworks may provide greater human-AI collaboration, a nuance policymakers should consider.
-- **Adoption-Revenue Link**: Countries with adoption rates above the 2024 global average of 51.26% (Query 7) consistently showed revenue increases. Specifically, the "High" adoption group (66-100%) averaged a 15% revenue growth (Query 6), reinforcing AI’s economic benefits.
+### AI Adoption and Growth Trends
 
-## Recommendations
+ - **The global average AI adoption rate is 54%**. This figure serves as a crucial benchmark for evaluating regional and industry-specific performance. SQL queries were used to confirm this average across all records.
+ - **AI adoption varies significantly by country**, with UK showing a 65% rate followed by France at 57%. SQL analysis was performed to rank all countries by their average adoption rate over the entire period.
+ - **The AI adoption rate peaked in 2023 at 60%** and has since shown a slight decline, indicating a potential market consolidation or maturation phase.
 
-- **To Business Leaders**: Given gaming’s 800 TBs/year content growth, invest in AI tools and training for creative teams to capitalize on this trend over the next 3-5 years.
-- **To Operations Managers**: With manufacturing’s high job loss (e.g., &gt;20%), allocate resources for reskilling programs targeting automation-affected workers in 2026 budgets.
-- **To Policymakers**: Since strict regulations correlate with a 56% collaboration rate vs. 51% in lenient settings (Query 9), consider balanced policies that encourage collaboration without hurting innovation.
+<img width="1313" height="686" alt="Screenshot 2025-07-29 at 18 46 06" src="https://github.com/user-attachments/assets/ed81e9f8-b5cd-41db-89e1-5f0713dda9de" />
 
-## Caveats and Assumptions
+### Industry and Content Volume Analysis
 
-- **Data Representativeness**: Assumes the dataset reflects global digital media trends, though coverage may skew toward certain countries/industries.
-- **Cleaning Assumptions**: Missing adoption rates were concluded with industry averages, potentially smoothing outliers.
-- **Tool Usage**: It is highly likely that the Manufacturing category also includes activities like product design and prototyping, as it is unlikely that tools like Midjourney would cause such high job loss in sectors focused on physical goods production.
+ - **The total volume of AI content produced is 9,215 TB**.
+ - **The Gaming industry is the largest producer of AI content**, followed by Media, Education, and Retail. This was confirmed by SQL queries summing the content volume for each industry.
+ - **SQL analysis was used to calculate the growth in AI-generated content** for each industry between 2020 and 2025, identifying the fastest-scaling sectors.
+ - **Content volume growth shows Gaming sector scaling at the fastest rate.** In 2020 this sector had 16TB of content volume but in 2025 it has 277TB suggesting this industry have found sustainable AI integration model.
 
-## How to Run
+<img width="1281" height="456" alt="Screenshot 2025-07-29 at 18 42 30" src="https://github.com/user-attachments/assets/9d02b188-a3c1-46f2-ab12-c6d7ae704e50" />
 
-1. Download the dataset from Kaggle.
-2. Import it into a MySQL database.
-3. Execute `AI_Impact_Analysis.sql` in a SQL editor.
+<img width="1201" height="697" alt="Screenshot 2025-07-29 at 17 40 19" src="https://github.com/user-attachments/assets/324ddb27-6ae9-4b25-9ece-8f9ac0c94521" />
 
-## Skills Demonstrated
+### Workforce Impact and Economic Outcomes
 
-- **SQL**: Used aggregations (AVG, SUM), subqueries, joins, window functions (RANK), and CASE statements for categorization.
-- **Analysis**: Performed trend analysis, grouping, filtering, and correlation to uncover actionable insights.
-- **Problem-Solving**: Addressed AI’s social, economic, and regulatory implications.
+ - **The average job loss due to AI across all sectors is 26%**.
+ - **A "Medium" AI adoption rate is linked to the highest average increase in revenue**, suggesting that overly aggressive or low levels of adoption may yield suboptimal financial returns.
+ - **The Manufacturing industry experiences the highest average job loss at around 35%**, while paradoxically using creative tools like Midjourney, suggesting AI is probably being adopted for design and prototyping phases rather than traditional production roles
 
-## Contact Me
+<img width="735" height="730" alt="Screenshot 2025-07-29 at 17 51 27" src="https://github.com/user-attachments/assets/15b6e080-ffe8-44f1-a6b0-14ceb09b1ccb" />
 
-- **Name**: Viktor Kukhar
-- **LinkedIn**: linkedin.com/in/kukhar-viktor/
-- **Email**: viktor.kukhar1708@gmail.com
+### Regulatory Effects and Human-AI Collaboration
 
----
+- **Job loss is highest in countries with "Moderate" regulation at 27%**, followed by "Lenient" at 26% and "Strict" at 24%. This counterintuitive finding suggests that moderate regulatory frameworks may create uncertainty that leads to more defensive automation strategies.
+ - **Human-AI collaboration rates are notably higher in strict regulatory environments**, averaging around 55% compared to 45% in lenient frameworks. This indicates that stricter regulations may encourage more thoughtful integration approaches that preserve human roles.
+ - **The scatter plot shows a varied relationship between AI Adoption and Human-AI Collaboration**, with no simple linear correlation, indicating that higher adoption does not automatically mean higher or lower collaboration, but rather depends on implementation strategy and industry context.
 
-**Last Updated**: May 2025
+<img width="674" height="622" alt="Screenshot 2025-07-29 at 18 39 45" src="https://github.com/user-attachments/assets/8778cff4-980e-475e-97ba-ad8691e71644" />
 
-![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
-![Data Analysis](https://img.shields.io/badge/Analysis-Insights-green)
+<img width="829" height="723" alt="Screenshot 2025-07-29 at 18 40 30" src="https://github.com/user-attachments/assets/5bf3b6ca-af19-4643-beb7-02c2ee62e3d7" />
+
+## Recommendations:
+
+Based on the insights and findings above, we would recommend **Business Leaders and Policymakers** to consider the following:
+
+ - The "Medium" adoption group sees the highest revenue increase. **Businesses should pursue a balanced, phased approach to AI integration to optimize return on investment.**
+ - Job loss is highest under "Moderate" regulation. **Policymakers should evaluate and consider frameworks that may mitigate workforce displacement, potentially drawing lessons from "Strict" regulatory environments.**
+ - The Gaming and Media industries lead in AI content generation. **Companies in other sectors can study these leaders to identify best practices for scaling AI-driven production.**
+ - Job loss from AI is a significant factor at 26%. **Organizations must proactively invest in reskilling programs to prepare the workforce for new roles that involve collaborating with AI systems.**
+
+## Assumptions and Caveats:
+
+Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
+
+ - **Data Representativeness:** Assumes the dataset reflects global digital media trends, though coverage may skew toward certain countries or industries.
+ - **Tool Usage Interpretation:** It is highly likely that the Manufacturing category also includes activities like product design and prototyping, as it is unlikely that tools like Midjourney would cause such high job loss in sectors focused on physical goods production.
+ - **Data Completeness:** The analysis assumes that the data for the years 2020 and 2025 is complete for the countries and industries included in the trend calculations.
