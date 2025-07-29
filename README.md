@@ -36,7 +36,7 @@ The analysis is based on a single table, `Global_AI_Content_Impact_Dataset`. A d
 
 This analysis of global AI trends from 2020 to 2025 reveals an average AI adoption rate of 54% and an average job loss of 26%. The total AI-generated content volume has reached 9,215 TB, with the Gaming and Media sectors leading this expansion. A medium level of AI adoption correlates with the highest increase in revenue, while regulatory environments with "Moderate" policies experience the highest job loss.
 
-<img width="1202" height="809" alt="Screenshot 2025-07-29 at 17 34 12" src="https://github.com/user-attachments/assets/3f87826b-a92a-4701-87a3-ecb34028d0fd" />
+<img width="1202" height="799" alt="Screenshot 2025-07-29 at 18 51 42" src="https://github.com/user-attachments/assets/78da25c5-f48e-4449-b835-fcd240193cfb" />
 
 ## Insights Deep Dive
 
